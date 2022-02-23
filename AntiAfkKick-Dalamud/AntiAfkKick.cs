@@ -1,5 +1,6 @@
 ﻿using AntiAfkKick;
 using Dalamud.Game.ClientState.Keys;
+using Dalamud.Game.Command;
 using Dalamud.Hooking;
 using Dalamud.Logging;
 using Dalamud.Plugin;
@@ -11,6 +12,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
 using static AntiAfkKick.Native.Keypress;
 
 namespace AntiAfkKick_Dalamud
@@ -38,14 +40,43 @@ namespace AntiAfkKick_Dalamud
                 }
                 UnkFuncHook.Dispose();
             }
+            Svc.Commands.RemoveHandler("/antiafk");
             running = false;
         }
 
         public AntiAfkKick(DalamudPluginInterface pluginInterface)
         {
             pluginInterface.Create<Svc>();
+            Svc.Commands.AddHandler("/antiafk", new CommandInfo(OnCommand)
+            {
+                HelpMessage = "Changes the state of Anti AFK Kick to a new state\nKitten/antiafk <on|off> → Toggle the state of the plugin on or off"
+            });
+
             UnkFuncHook = new(Svc.SigScanner.ScanText("48 8B C4 48 89 58 18 48 89 70 20 55 57 41 55"), UnkFunc_Dtr);
             UnkFuncHook.Enable();
+        }
+
+        private void OnCommand(string command, string arguments)
+        {
+            if (arguments == "on")
+            {
+                running = true;
+                Svc.Chat.Print("Plugin turned on");
+            }
+            else if (arguments == "off")
+            {
+                running = false;
+                Svc.Chat.Print("Plugin turned off");
+            }
+            else if (arguments == "")
+            {
+                running = !running;
+                Svc.Chat.Print(string.Format("Plugin turned {0}", running ? "on" : "off"));
+            }
+            else
+            {
+                Svc.Chat.Print(Svc.Commands.Commands["/antiafk"].HelpMessage);
+            }
         }
 
         void BeginWork()
