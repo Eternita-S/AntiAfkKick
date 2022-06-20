@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Authors>Eternita</Authors>
-		<Version>2.1.0.0</Version>
+		<Version>2.1.0.2</Version>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -28,7 +28,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="DalamudLinter" Version="1.0.3" />
-		<PackageReference Include="DalamudPackager" Version="2.1.5" />
+		<PackageReference Include="DalamudPackager" Version="2.1.7" />
 		<Reference Include="Newtonsoft.Json">
 			<HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
 			<Private>False</Private>
