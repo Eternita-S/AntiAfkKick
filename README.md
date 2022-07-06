@@ -1,4 +1,8 @@
 # AntiAfkKick
+
+|Square Enix have disabled afk kick in a recent game update. The AntiAfkKick plugin is not necessary for now, unless you want to prevent auto-kick from instances|
+|---|
+
 An application, Dalamud and ACT plugin for preventing being auto-kicked from FFXIV due to inactivity.
 
 **Please use responsibly, this is meant to be used for gatherers or if you are waiting for raid/pf/event, not to just afk in limsa dancing**
