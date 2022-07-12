@@ -12,9 +12,8 @@
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-		<OutputPath>$(appdata)\XIVLauncher\devPlugins\AntiAfkKick\</OutputPath>
-    <BaseOutputPath>$(appdata)\XIVLauncher\devPlugins\AntiAfkKick\</BaseOutputPath>
     <NoWarn>CS1591</NoWarn>
   </PropertyGroup>
 
@@ -24,7 +23,9 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+    <DalamudLibPath>$(AppData)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+    <OutputPath>$(AppData)\XIVLauncher\devPlugins\AntiAfkKick\</OutputPath>
+    <BaseOutputPath>$(AppData)\XIVLauncher\devPlugins\AntiAfkKick\</BaseOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Advanced Combat Tracker">
-      <HintPath>..\..\act\Advanced Combat Tracker.exe</HintPath>
+      <HintPath>$(FFXIV)\Tools\ACT\Advanced Combat Tracker.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
