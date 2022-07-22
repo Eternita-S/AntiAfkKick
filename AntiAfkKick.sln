@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiAfkKick-Standalone", "AntiAfkKick\AntiAfkKick-Standalone.csproj", "{F15D6CA9-CEE5-4FC7-A7A1-87C70DBBC6FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiAfkKick-Dalamud", "AntiAfkKick-Dalamud\AntiAfkKick-Dalamud.csproj", "{EFF438EF-C467-4142-8E8B-D65D113CAEA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntiAfkKick-Dalamud", "AntiAfkKick-Dalamud\AntiAfkKick-Dalamud.csproj", "{EFF438EF-C467-4142-8E8B-D65D113CAEA3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiAfkKick-ACT", "AntiAfkKick-ACT\AntiAfkKick-ACT.csproj", "{322EE0BF-A029-4495-9482-EC5016529D2A}"
 EndProject
@@ -19,8 +19,8 @@ Global
 		{F15D6CA9-CEE5-4FC7-A7A1-87C70DBBC6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F15D6CA9-CEE5-4FC7-A7A1-87C70DBBC6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F15D6CA9-CEE5-4FC7-A7A1-87C70DBBC6FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EFF438EF-C467-4142-8E8B-D65D113CAEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFF438EF-C467-4142-8E8B-D65D113CAEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF438EF-C467-4142-8E8B-D65D113CAEA3}.Debug|Any CPU.ActiveCfg = Release|x64
+		{EFF438EF-C467-4142-8E8B-D65D113CAEA3}.Debug|Any CPU.Build.0 = Release|x64
 		{EFF438EF-C467-4142-8E8B-D65D113CAEA3}.Release|Any CPU.ActiveCfg = Release|x64
 		{EFF438EF-C467-4142-8E8B-D65D113CAEA3}.Release|Any CPU.Build.0 = Release|x64
 		{322EE0BF-A029-4495-9482-EC5016529D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

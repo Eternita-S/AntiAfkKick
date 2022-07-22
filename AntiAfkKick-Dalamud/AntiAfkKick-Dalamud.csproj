@@ -2,33 +2,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Authors>Eternita</Authors>
-		<Version>2.1.0.0</Version>
+		<Version>2.1.0.2</Version>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<TargetFramework>net5.0-windows</TargetFramework>
-		<Platforms>x64</Platforms>
-		<LangVersion>latest</LangVersion>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-		<OutputPath>bin\$(Configuration)\</OutputPath>
-		<NoWarn>CS1591</NoWarn>
-	</PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Platforms>x64</Platforms>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
 
-	<PropertyGroup Label="Documentation">
-		<DocumentationFile></DocumentationFile>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	</PropertyGroup>
+  <PropertyGroup Label="Documentation">
+    <DocumentationFile></DocumentationFile>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+  </PropertyGroup>
 
-	<PropertyGroup>
-		<DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+  <PropertyGroup>
+    <DalamudLibPath>$(AppData)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+    <OutputPath>$(AppData)\XIVLauncher\devPlugins\AntiAfkKick\</OutputPath>
+    <BaseOutputPath>$(AppData)\XIVLauncher\devPlugins\AntiAfkKick\</BaseOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="DalamudLinter" Version="1.0.3" />
-		<PackageReference Include="DalamudPackager" Version="2.1.5" />
+		<PackageReference Include="DalamudPackager" Version="2.1.7" />
 		<Reference Include="Newtonsoft.Json">
 			<HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
 			<Private>False</Private>
